@@ -35,6 +35,8 @@ function extractNumbers(arr){
 
 
 // question number 2
+
+// Safely sums up numeric values extracted from an array
 function sumNumbersSafe (arr){
     let sum = 0
     try{
