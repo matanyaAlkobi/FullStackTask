@@ -67,7 +67,7 @@ function extractPeopleBornBefore1990(arr){
     return dataOfPepoleBornBefore1990;
 }
 
-// console.log(extractPeopleBornBefore1990(data))
+console.log(extractPeopleBornBefore1990(data))
 
 
 // Counts how many times each food appears in all people's favoriteFoods
