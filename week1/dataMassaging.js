@@ -42,6 +42,7 @@ fish: ["bass", "tuna"],
 ]; 
 
 
+// Returns an array of all names from the input array of people
 function extractAllNames(arr){
     let namesArray  = []
     for (let item  of  arr){
@@ -51,6 +52,8 @@ function extractAllNames(arr){
 }
 // console.log(extractAllNames(data))
 
+
+// Returns all people born before January 1, 1990
 function extractPeopleBornBefore1990(arr){
     let dataOfPepoleBornBefore1990 = []
     for (let obj of  arr){
@@ -67,6 +70,7 @@ function extractPeopleBornBefore1990(arr){
 // console.log(extractPeopleBornBefore1990(data))
 
 
+// Counts how many times each food appears in all people's favoriteFoods
 function countFavoriteFoods(arr){
     const foodData = data.flatMap(person => [...person.favoriteFoods.meats, ...person.favoriteFoods.fish])
     const foodCounter = {}
@@ -81,7 +85,7 @@ function countFavoriteFoods(arr){
     return foodCounter;
 }
 
-console.log(countFavoriteFoods(data));
+// console.log(countFavoriteFoods(data));
 
 
 
