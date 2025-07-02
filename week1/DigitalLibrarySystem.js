@@ -9,6 +9,7 @@ class  MediaItem {
     }
 }
 
+
 class Book extends MediaItem{
     constructor(author, pageCount, title, year, genre){
         super(title, year, genre);
@@ -23,6 +24,7 @@ class Book extends MediaItem{
             and is ${this.pageCount} pages long.`;
     }
 }
+
 
 class Movie extends MediaItem{
     constructor(director, durationMinutes, title, year, genre){
@@ -39,6 +41,7 @@ class Movie extends MediaItem{
             and is ${this.durationMinutes} minutes long.`;
     }
 }
+
 
 class Library{
     #mediaItemArray = [];
@@ -61,5 +64,3 @@ class Library{
         return result;
     }
 }
-
-
