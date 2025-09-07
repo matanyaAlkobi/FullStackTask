@@ -53,4 +53,136 @@ export default function App() {
       </div>
     </div>
   );
+} 
+
+css for post
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+.post-card {
+  width: min(100%, 62ch);
+  margin-inline: auto;
+  background: #fff;
+  color: #222;
+  border: 0.06rem solid #ddd;
+  border-radius: 0.9rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.07);
+  padding: clamp(1rem, 2vw, 1.4rem);
+  display: grid;
+  gap: clamp(0.8rem, 1.2vw, 1.2rem);
+  font-size: clamp(0.95rem, 0.5vw + 0.9rem, 1.05rem);
+  line-height: 1.55;
+}
+
+.post-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(0.7rem, 1vw, 1rem);
+}
+
+.avatar {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #a36cf0, #f25a8e);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.publisher .name {
+  font-size: clamp(1.05rem, 0.6vw + 1rem, 1.25rem);
+}
+
+.publisher .sub {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.description {
+  margin: 0;
+}
+
+.media {
+  margin: 0;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: clamp(0.4rem, 0.6vw, 0.8rem);
+  border-top: 0.06rem solid #ddd;
+}
+
+.like {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5ch;
+  font: inherit;
+  line-height: 1;
+  padding: 0.6em 0.9em;
+  border-radius: 999rem;
+  border: 0.06rem solid #ddd;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 120ms ease;
+}
+
+.like:active {
+  transform: scale(0.98);
+}
+
+.like span {
+  transform: translateY(0.04em);
+}
+
+.time {
+  color: #666;
+  font-size: 0.95em;
+  white-space: nowrap;
+}
+
+@media (prefers-color-scheme: dark) {
+  .post-card {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    border-color: #333;
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.35);
+  }
+
+  .publisher .sub,
+  .time {
+    color: #aaa;
+  }
+
+  .like {
+    border-color: #333;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .like {
+    transition: none;
+  }
+}
+
+ת
